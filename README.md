@@ -2,7 +2,7 @@
 
 <div align="center">
 <h2>
-    <em>Portfolio Projects Manager"</em>
+    <em>Portfolio Projects Manager</em>
 </h2>
 
 </div>
