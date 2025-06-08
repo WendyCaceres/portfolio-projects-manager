@@ -1,0 +1,28 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import Hero from "@/components/sections/Hero.astro"
+import Projects from "@/components/sections/Projects.astro"
+import ProjectForm from "@/components/ProjectForm.jsx"
+
+import { cv } from '../cv';
+const { name } = cv.basics;
+---
+
+<Layout title={`Portafolio de ${name}`}>
+  <main>
+    <Hero />
+    <Projects />
+  </main>
+</Layout>
+
+<style>
+  main {
+    @apply p-4 max-w-5xl mx-auto w-full;
+  }
+  @media (width <= 700px) {
+    main {
+      @apply p-2;
+    }
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+import { cv } from '../cv';
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { summary } = cv.basics;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={summary} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply m-0 p-0;
+  }
+  a {
+    @apply text-blue-500 hover:underline;
+  }
+  ul {
+    @apply list-none m-0 p-0;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold m-0;
+  }
+  p {
+    @apply text-gray-600 dark:text-gray-300 text-sm leading-relaxed m-0;
+  }
+</style>
